@@ -14,6 +14,11 @@
     --transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
 }
 
+body {
+    height: 100vh;
+    background-color: var(--background);
+}
+
 /* ... En tête de page ... */
 header {
     display: flex;
@@ -30,22 +35,34 @@ header {
     flex-wrap: wrap;
 }
 
+/* ... Taille du logo ... */
+.logo-container {
+    display: flex;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+#logo {
+    height: 100%;
+    width: 100%;
+}
+
 /* ... Navigation ... */
-nav > ul {
+nav ul {
     display: flex;
     list-style: none;
     margin-left: auto;
     gap: 48px;
 }
 
-nav > ul > li > a {
+nav ul li a {
     text-decoration: none;
     color: var(--texte);
     font-size: 1.2rem;
     transition: var(--transition)
 }
 
-nav > ul > li > a:hover {
+nav ul li a:hover {
     color: #517292;
 }
 
@@ -89,17 +106,15 @@ nav > ul > li > a:hover {
 #menu-burger {
     height: 100%;
     width: 0;
-    position: fixed;
+    position: sticky;
     z-index: 1;
     top: 80px;
     left: 0;
     background-color: var(--divs);
     overflow-x: hidden;
-    padding-top: 60px;
     transition: 0.5s;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 16px;
 }
 
 #menu-burger ul {
@@ -114,7 +129,7 @@ nav > ul > li > a:hover {
 #menu-burger ul li a {
     color: var(--texte);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 12px;
     transition: var(--transition);
 }
 
@@ -150,6 +165,12 @@ nav > ul > li > a:hover {
     .comptes {
         display: none;
     }
+
+    #logo {
+        height: 70%;
+        width: 70%;
+    }
+
 
     /* ... Animation Menu Burger ... */
 
@@ -203,5 +224,12 @@ nav > ul > li > a:hover {
         stroke-dasharray: 90 207;
         stroke-dashoffset: -134;
         stroke-width: 6;
+    }
+}
+
+/* ... Responsive à partir de 300px ... */
+@media (max-width: 300px) {
+    .logo-container {
+        justify-content: flex-start;
     }
 }
