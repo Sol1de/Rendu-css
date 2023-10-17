@@ -97,6 +97,9 @@ nav > ul > li > a:hover {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 #menu-burger ul {
