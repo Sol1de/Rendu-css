@@ -178,7 +178,7 @@ aside {
 @media (max-width: 750px) {
     header {
         justify-content: space-between;
-        padding: 0px;
+        padding: 0px 20px;
     }
     
     nav {
@@ -192,6 +192,10 @@ aside {
     #logo {
         height: 70%;
         width: 70%;
+    }
+
+    .container {
+        padding: 0px 32px;
     }
 
 
