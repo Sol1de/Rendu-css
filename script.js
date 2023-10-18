@@ -13,13 +13,11 @@ function toggleMenu() {
 //Ferme le menu burger lorsque l'utilisateur scroll
 function closeMenuBurgerOnScroll() {
   const burger = document.getElementById("menu-burger");
-  const main = document.getElementById("main");
   const menu = document.querySelector('.menu');
 
   window.addEventListener("scroll", function() {
       menu.classList.remove('opened');
       burger.style.width = "0";
-      main.style.marginLeft = "0";
   });
 }
 
