@@ -35,7 +35,7 @@ header {
     flex-wrap: wrap;
 }
 
-/* ... Taille du logo ... */
+/* ... Taille & position du logo ... */
 .logo-container {
     display: flex;
     justify-content: flex-end;
@@ -104,7 +104,7 @@ nav ul li a:hover {
 
 /* ... Menu Burger (utile lorsque la page est < 750px) ... */
 #menu-burger {
-    height: 100vh;
+    height: inherit;
     width: 0;
     position: absolute;
     z-index: 1;
@@ -137,21 +137,14 @@ nav ul li a:hover {
     color: #517292;
 }
 
-.container {
-    display: flex;
-    height: 100vh; /* Valeur a modifier une fois que le main & aside seront fini */
-    width: 100%;
-    padding: 0px 93px;
-    gap: 20px;
-}
-
+/* ... Layout main & Aside ... */
 .container-post-infos {
     display: grid;
     grid-template-areas: "main aside";
     width: 100%;
     height: 200vh; /* Valeur a modifier une fois que le main & aside seront fini */
     grid-template-columns: 3fr 1fr;
-    padding: 80px 0px;
+    padding: 80px 93px;
     gap: 20px;
 }
 
@@ -174,11 +167,13 @@ aside {
     grid-area: aside;
 }
 
+/* ... Aside 1ere section ... */
 .user-infos {
     display: flex;
     grid-area: user-infos;
     background-color: var(--divs);
     border-radius: 12px;
+    padding: 0px 10px;
 }
 
 .user-status {
@@ -215,6 +210,7 @@ aside {
     background-color: var(--surbrillance);
 }
 
+/* ... Aside 2eme section ... */
 .trends {
     grid-area: trends;
     background-color: var(--divs);
@@ -259,6 +255,8 @@ aside {
 
 /* ... Responsive à partir de 750px ... */
 @media (max-width: 750px) {
+
+    /* ... Responsive header ... */
     header {
         justify-content: space-between;
         padding: 0px 20px;
@@ -277,10 +275,37 @@ aside {
         width: 70%;
     }
 
-    .container {
-        padding: 0px 32px;
+    /* ... Responsive container main & aside ... */
+    .container-post-infos {
+        grid-template-areas: "aside"
+                                "main";
+        grid-template-columns: 1fr;
+        padding: 5px 20px;
+        height: fit-content;
     }
 
+    /* ... Responsive aside ... */
+    aside {
+        position: relative;
+        height: fit-content;
+    }
+
+    .user-infos {
+        justify-content: center;
+    }
+
+    .trends {
+        gap: 0px;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .trends ol {
+        font-size: 14px;
+        gap: 20px;
+        align-items: center;
+        list-style-type: none;
+    }
 
     /* ... Animation Menu Burger ... */
 
@@ -339,6 +364,8 @@ aside {
 
 /* ... Responsive à partir de 300px ... */
 @media (max-width: 300px) {
+
+    /* ... Responsive logo ... */
     .logo-container {
         justify-content: flex-start;
     }
