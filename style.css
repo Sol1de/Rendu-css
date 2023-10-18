@@ -58,7 +58,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: var(--texte);
-    font-size: 1.2rem;
+    font-size: 16px;
     transition: var(--transition)
 }
 
@@ -139,6 +139,7 @@ nav ul li a:hover {
 
 .container {
     display: flex;
+    height: 100vh; /* Valeur a modifier une fois que le main & aside seront fini */
     width: 100%;
     padding: 0px 93px;
     gap: 20px;
@@ -146,11 +147,15 @@ nav ul li a:hover {
 
 .container-post-infos {
     display: grid;
-    grid-template-areas: "main main main aside";
+    grid-template-areas: "main aside";
     width: 100%;
+    height: 100vh; /* Valeur a modifier une fois que le main & aside seront fini */
+    grid-template-columns: 3fr 1fr;
 }
 
 main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-area: main;
     background-color: red;
 }
