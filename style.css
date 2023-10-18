@@ -15,7 +15,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 200vh;
     background-color: var(--background);
 }
 
@@ -149,8 +149,10 @@ nav ul li a:hover {
     display: grid;
     grid-template-areas: "main aside";
     width: 100%;
-    height: 100vh; /* Valeur a modifier une fois que le main & aside seront fini */
+    height: 200vh; /* Valeur a modifier une fois que le main & aside seront fini */
     grid-template-columns: 3fr 1fr;
+    padding: 80px 0px;
+    gap: 20px;
 }
 
 main {
@@ -161,8 +163,84 @@ main {
 }
 
 aside {
+    display: grid;
+    position: sticky;
+    top: 10px;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "user-infos"
+                        "trends";
+    gap: 10px;
+    height: 750px;
     grid-area: aside;
-    background-color: blue;
+}
+
+.user-infos {
+    display: flex;
+    grid-area: user-infos;
+    background-color: var(--divs);
+    border-radius: 12px;
+}
+
+.user-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--texte);
+}
+
+.user-status p:nth-child(1) {
+    font-family: Inter;
+    font-size: 39px;
+    font-weight: 700;
+}
+
+.user-status p:nth-child(2) {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--surbrillance);
+}
+
+.ellipse {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 7px 2px;
+}
+
+.ellipse div {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: var(--surbrillance);
+}
+
+.trends {
+    grid-area: trends;
+    background-color: var(--divs);
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    color: var(--texte);
+    border-radius: 12px;
+}
+
+.trends p {
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.trends ol {
+    display: flex;
+    flex-direction: column;  
+    gap: 30px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
 }
 
 /* ... Responsive à partir de 1112px ... */
