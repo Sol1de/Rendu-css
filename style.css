@@ -172,6 +172,10 @@ main .post:nth-of-type(3n) {
     grid-column: 1 / 3;
 }
 
+main .post:nth-of-type(3n) + .separator {
+    display: block;
+}
+
 /* ... Layout post ... */
 .post {
     display: grid;
