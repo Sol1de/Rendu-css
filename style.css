@@ -150,17 +150,22 @@ nav ul li a:hover {
 
 main {
     display: grid;
-    height:fit-content;
+    height: fit-content;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "post";
     grid-area: main;
     gap: 20px;
+    grid-auto-flow: dense;
 }
 
 main .separator {
     grid-column: 1 / 3; 
     justify-self: center;
+}
+
+main .separator:nth-of-type(2n + 1) {
+    display: none;
 }
 
 main .post:nth-of-type(3n) {
@@ -333,6 +338,20 @@ aside {
         padding: 9px 93px;
         justify-content: center;
         gap: 24px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "post";
+        gap: 10px 0px;
+    }
+
+    main .post:nth-of-type(n) {
+        grid-column: 1 / 3;
+    }
+
+    main .separator:nth-of-type(n) {
+        display: block;
     }
   }
 
