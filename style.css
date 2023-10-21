@@ -346,6 +346,7 @@ aside {
 
 /* ... Responsive à partir de 1112px ... */
 @media (max-width: 1112px) {
+    
     /* ... Responsive en tête de page ... */
     header {
         height: auto;

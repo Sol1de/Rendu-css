@@ -46,7 +46,7 @@ function setWidthHeight() {
   }
 }
 
-//Appel de la fonction closeMenuBurgerOnScroll()
+//Appel des fonctions au chargement & resize de la page 
 closeMenuBurgerOnScroll();
 setHeight();
-setWidthHeight();;
+setWidthHeight();
