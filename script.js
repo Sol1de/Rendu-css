@@ -21,13 +21,32 @@ function closeMenuBurgerOnScroll() {
   });
 }
 
+//Animation menu burger
+function animation() {
+  const burger = document.querySelector('.menu');
+  burger.classList.toggle('opened');
+  burger.setAttribute('aria-expanded', this.classList.contains('opened'));
+}
 
-  //Animation menu burger
-  function animation() {
-    const burger = document.querySelector('.menu');
-    burger.classList.toggle('opened');
-    burger.setAttribute('aria-expanded', this.classList.contains('opened'));
+//Applique la même hauteur au menu burger que du body
+function setHeight() {
+  const menu = document.getElementById("menu-burger");
+  const bodyHeight = document.body.scrollHeight;
+  menu.style.height = bodyHeight + "px";
+}
+
+//Responsive header < 300px
+function setWidthHeight() {
+  const menu = document.getElementById("menu-burger");
+  const bodyWidth = document.body.scrollWidth;
+  const svg = document.querySelector('.menu svg');
+  if (bodyWidth < 300) {
+    svg.setAttribute('width', '50');
+    svg.setAttribute('height', '50');
   }
+}
 
 //Appel de la fonction closeMenuBurgerOnScroll()
 closeMenuBurgerOnScroll();
+setHeight();
+setWidthHeight();;
