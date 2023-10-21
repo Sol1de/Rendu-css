@@ -196,6 +196,7 @@ main .post:nth-of-type(3n) + .separator {
                         "image";
     color: var(--texte);
     font-family: 'Inter', sans-serif;
+    height: fit-content;
 }
 
 .profile {
@@ -246,7 +247,7 @@ main .post:nth-of-type(3n) + .separator {
 
 .post-image {
     border-radius: 12px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
@@ -343,7 +344,7 @@ aside {
     padding: 20px;
 }
 
-/* ... pied de page ... */
+/* ... Layout pied de page ... */
 footer {
     display: flex;
     width: 100%;
@@ -355,6 +356,15 @@ footer {
     font-weight: 400;
     color: var(--texte);
     background-color: var(--divs);
+}
+
+footer img {
+    transition: var(--transition);
+}
+
+footer img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
 .prompt-rights {
