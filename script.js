@@ -35,18 +35,6 @@ function setHeight() {
   menu.style.height = bodyHeight + "px";
 }
 
-//Responsive header < 300px
-function setWidthHeight() {
-  const menu = document.getElementById("menu-burger");
-  const bodyWidth = document.body.scrollWidth;
-  const svg = document.querySelector('.menu svg');
-  if (bodyWidth < 300) {
-    svg.setAttribute('width', '50');
-    svg.setAttribute('height', '50');
-  }
-}
-
-//Appel des fonctions au chargement & resize de la page 
+//Appel des foncctions
 closeMenuBurgerOnScroll();
 setHeight();
-setWidthHeight();
