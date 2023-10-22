@@ -49,7 +49,6 @@ body {
 @media (max-width: 300px) {
 
     /* ... Responsive container main & aside ... */
-
     .container-post-infos {
         padding: 2px 3px;
     }

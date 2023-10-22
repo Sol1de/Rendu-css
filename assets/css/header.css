@@ -30,7 +30,6 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    margin-left: auto;
     gap: 48px;
 }
 
@@ -49,7 +48,6 @@ nav ul li a:hover {
 .comptes {
     display: flex;
     gap: 24px;
-    align-items: center;
 }
 
 .connexion {

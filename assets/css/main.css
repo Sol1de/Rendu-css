@@ -4,7 +4,6 @@ main {
     height: fit-content;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "post";
     grid-area: main;
     gap: 20px;
     grid-auto-flow: dense;
@@ -48,7 +47,6 @@ main .post:nth-of-type(3n) + .separator {
     grid-area: profile;
     display: flex;
     align-items: center;
-    align-content: center;
     gap: 0px 10px;
     flex-wrap: wrap;
 }
@@ -56,7 +54,6 @@ main .post:nth-of-type(3n) + .separator {
 .username {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .username p:nth-child(1) {
@@ -86,7 +83,6 @@ main .post:nth-of-type(3n) + .separator {
     grid-area: image;
     width: 100%;
     height: auto;
-    flex-shrink: 0;
     border-radius: 12px;
 }
 
